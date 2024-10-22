@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="main.css">
+
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <section id="work-experience">
+        <h2>Timeline</h2>
+
+        <div class="timeline-btn-wrapper">
+            <button onclick="showVideo()">2018</button>
+            <button onclick="showImage('img-one')">2020</button>
+            <button onclick="showImage('img-two')">2021</button>
+            <button onclick="showVideo()">2023</button>
+        </div>
+        
+        <div class="video-main-wrapper">
+            <video id="main-video" class="responsive-video" muted loop playsinline preload="auto">
+                <source src="https://videos.pexels.com/video-files/4064865/4064865-uhd_2732_1440_25fps.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        
+            <img src="https://img.freepik.com/free-photo/modern-equipped-computer-lab_23-2149241213.jpg" alt="" id="img-one" class="hide-image">
+            <img src="https://img.freepik.com/free-photo/group-people-working-team_23-2147656716.jpg" alt="" id="img-two" class="hide-image">
+        </div>
+        
+        
+        
+
+        <p>I have 3+ years of experience working in front-end and back-end development, specializing in modern web technologies like React, Node.js, and MongoDB. I've also worked with Shopify and WordPress, building custom solutions for e-commerce platforms and content management systems.</p>
+        
+        
+
+        <div class="experience-container">
+            <div class="experience-box">
+                <h3>12th (2018-19)</h3>
+                <p>Completed higher secondary education with a focus on Science. Achieved a strong academic record and developed critical thinking, analytical, and problem-solving skills.</p>
+            </div>
+            <div class="experience-box">
+                <h3>BCA (2019-21)</h3>
+                <p>Pursued Bachelor of Computer Applications. Gained foundational knowledge in programming, databases, and software development. Built projects using Java, C++, and SQL.</p>
+            </div>
+            <div class="experience-box">
+                <h3>MCA (2021-23)</h3>
+                <p>Mastered advanced topics in Computer Applications. Focused on full-stack development, data structures, and algorithms. Developed expertise in technologies like React, Node.js, and MongoDB.</p>
+            </div>
+            <div class="experience-box">
+                <h3>E-Vitamin Business Consulting PVT Ltd (2023-On going)</h3>
+                <p>Currently working as a consultant. Involved in software development, system optimization, and providing business solutions to enhance client operations. Leading various projects using modern tech stacks.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    </footer>
+
+    <script >
+
+const video = document.querySelector('.responsive-video');
+
+// Play video on hover
+video.addEventListener('mouseenter', function() {
+    video.play();
+});
+
+// Pause video when hover ends
+video.addEventListener('mouseleave', function() {
+    video.pause();
+});
+
+
+
+
+
+    function showVideo() {
+        // Show the video and hide the images
+        document.getElementById("main-video").style.display = "block";
+        document.getElementById("img-one").style.display = "none";
+        document.getElementById("img-two").style.display = "none";
+    }
+
+    function showImage(imageId) {
+        // Hide the video
+        document.getElementById("main-video").style.display = "none";
+
+        // Hide all images
+        document.getElementById("img-one").style.display = "none";
+        document.getElementById("img-two").style.display = "none";
+
+        // Show the selected image
+        document.getElementById(imageId).style.display = "block";
+    }
+
+
+
+
+
+
+    </script>
+
+    
+</body>
+</html>
